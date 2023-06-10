@@ -1,0 +1,16 @@
+pipeline {
+             
+stage('BUILD') {
+            steps {
+                script {
+                    sh """
+                        set +x -e
+                        mkdir test
+                        cd test
+                        cp filepath file
+                        echo "COMPLETED BUILD STEP"
+                    """
+                }
+            }
+        }
+     }
